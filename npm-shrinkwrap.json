@@ -15,6 +15,11 @@
       "from": "@angular/core@2.2.0",
       "resolved": "https://registry.npmjs.org/@angular/core/-/core-2.2.0.tgz"
     },
+    "@angular/forms": {
+      "version": "2.2.0",
+      "from": "@angular/forms@2.2.0",
+      "resolved": "https://registry.npmjs.org/@angular/forms/-/forms-2.2.0.tgz"
+    },
     "@angular/platform-browser": {
       "version": "2.2.0",
       "from": "@angular/platform-browser@2.2.0",

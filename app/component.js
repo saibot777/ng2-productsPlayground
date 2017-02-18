@@ -11,34 +11,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var repository_model_1 = require("./repository.model");
 var ProductComponent = (function () {
-    function ProductComponent(ref) {
+    function ProductComponent() {
         this.model = new repository_model_1.Model();
-        this.targetName = "Kayak";
-        window.appRef = ref;
-        window.model = this.model;
     }
-    ProductComponent.prototype.getProductByPosition = function (position) {
-        return this.model.getProducts()[position];
-    };
     ProductComponent.prototype.getProduct = function (key) {
         return this.model.getProduct(key);
     };
     ProductComponent.prototype.getProducts = function () {
         return this.model.getProducts();
     };
-    ProductComponent.prototype.getProductCount = function () {
-        return this.getProducts().length;
-    };
-    ProductComponent.prototype.getClassesByPosition = function (position) {
-        var product = this.getProductByPosition(position);
-        return "p-a-1 " + (product.price < 50 ? "bg-info" : "bg-warning");
+    ProductComponent.prototype.getSelected = function (product) {
+        return product.name == this.selectedProduct;
     };
     ProductComponent = __decorate([
         core_1.Component({
             selector: "app",
             templateUrl: "app/template.html"
         }), 
-        __metadata('design:paramtypes', [core_1.ApplicationRef])
+        __metadata('design:paramtypes', [])
     ], ProductComponent);
     return ProductComponent;
 }());

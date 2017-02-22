@@ -38,6 +38,15 @@ var FormComponent = (function () {
     FormComponent.prototype.resetForm = function () {
         this.product = new product_model_1.Product();
     };
+    FormComponent.prototype.ngDoCheck = function () {
+        if (this.lastId != this.state.id) {
+            this.product = new product_model_1.Product();
+            if (this.state.mode == sharedState_model_1.MODES.EDIT) {
+                Object.assign(this.product, this.model.getProduct(this.state.id));
+            }
+            this.lastId = this.state.id;
+        }
+    };
     FormComponent = __decorate([
         core_1.Component({
             selector: "paForm",

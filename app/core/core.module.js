@@ -18,6 +18,7 @@ var model_module_1 = require("../model/model.module");
 var table_component_1 = require("./table.component");
 var form_component_1 = require("./form.component");
 var sharedState_model_1 = require("./sharedState.model");
+var Subject_1 = require("rxjs/Subject");
 var CoreModule = (function () {
     function CoreModule() {
     }
@@ -26,7 +27,13 @@ var CoreModule = (function () {
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, model_module_1.ModelModule],
             declarations: [table_component_1.TableComponent, form_component_1.FormComponent],
             exports: [model_module_1.ModelModule, table_component_1.TableComponent, form_component_1.FormComponent],
-            providers: [sharedState_model_1.SharedState] }), 
+            providers: [
+                {
+                    provide: sharedState_model_1.SHARED_STATE,
+                    useValue: new Subject_1.Subject()
+                }
+            ]
+        }), 
         __metadata('design:paramtypes', [])
     ], CoreModule);
     return CoreModule;

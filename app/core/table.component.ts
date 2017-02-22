@@ -8,7 +8,7 @@ import { MODES, SharedState } from "./sharedState.model";
 
 @Component({
     selector: "paTable",
-    selector: module.id,
+    moduleId: module.id,
     templateUrl: "table.component.html"
 })
 

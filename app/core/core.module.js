@@ -8,41 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by stefan.trajkovic on 22.2.2017..
- */
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var model_module_1 = require("../model/model.module");
 var table_component_1 = require("./table.component");
 var form_component_1 = require("./form.component");
-var sharedState_model_1 = require("./sharedState.model");
-var Subject_1 = require("rxjs/Subject");
 var state_pipe_1 = require("./state.pipe");
 var message_module_1 = require("../messages/message.module");
-var message_service_1 = require("../messages/message.service");
-var message_model_1 = require("../messages/message.model");
-var repository_model_1 = require("../model/repository.model");
-var sharedState_model_2 = require("./sharedState.model");
+//import { MODES } from "./sharedState.model";
+var router_1 = require("@angular/router");
 var CoreModule = (function () {
     function CoreModule() {
     }
     CoreModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, model_module_1.ModelModule, message_module_1.MessageModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, model_module_1.ModelModule, message_module_1.MessageModule, router_1.RouterModule],
             declarations: [table_component_1.TableComponent, form_component_1.FormComponent, state_pipe_1.StatePipe],
             exports: [model_module_1.ModelModule, table_component_1.TableComponent, form_component_1.FormComponent],
-            providers: [{
-                    provide: sharedState_model_1.SHARED_STATE,
-                    deps: [message_service_1.MessageService, repository_model_1.Model],
-                    useFactory: function (messageService, model) {
-                        var subject = new Subject_1.Subject();
-                        subject.subscribe(function (m) { return messageService.reportMessage(new message_model_1.Message(sharedState_model_2.MODES[m.mode] + (m.id != undefined
-                            ? " " + model.getProduct(m.id).name : ""))); });
-                        return subject;
-                    }
-                }]
         }), 
         __metadata('design:paramtypes', [])
     ], CoreModule);

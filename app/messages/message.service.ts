@@ -1,7 +1,4 @@
-/**
- * Created by stefan.trajkovic on 22.2.2017..
- */
-import { Injectable } from "@angular/core";
+﻿import { Injectable } from "@angular/core";
 import { Message } from "./message.model";
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";

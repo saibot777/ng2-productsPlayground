@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Created by stefan.trajkovic on 22.2.2017..
- */
 var core_1 = require("@angular/core");
 (function (MODES) {
     MODES[MODES["CREATE"] = 0] = "CREATE";

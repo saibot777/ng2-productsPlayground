@@ -1,9 +1,5 @@
-/**
- * Created by stefan.trajkovic on 22.2.2017..
- */
-import { Injectable } from "@angular/core";
+﻿import { Injectable } from "@angular/core";
 import { Product } from "./product.model";
-// import { StaticDataSource } from "./static.datasource";
 import { Observable } from "rxjs/Observable";
 import { RestDataSource } from "./rest.datasource";
 
@@ -13,17 +9,17 @@ export class Model {
     private locator = (p: Product, id: number) => p.id == id;
 
     constructor(private dataSource: RestDataSource) {
-        // this.products = new Array<Product>();
-        // this.dataSource.getData().forEach(p => this.products.push(p));
         this.dataSource.getData().subscribe(data => this.products = data);
     }
 
     getProducts(): Product[] {
         return this.products;
     }
+
     getProduct(id: number): Product {
         return this.products.find(p => this.locator(p, id));
     }
+
     saveProduct(product: Product) {
         if (product.id == 0 || product.id == null) {
             this.dataSource.saveProduct(product)
@@ -45,13 +41,4 @@ export class Model {
             }
         });
     }
-
-    private generateID(): number {
-        let candidate = 100;
-        while (this.getProduct(candidate) != null) {
-            candidate++;
-        }
-        return candidate;
-    }
-
 }

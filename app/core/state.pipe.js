@@ -8,9 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by stefan.trajkovic on 23.2.2017..
- */
 var core_1 = require("@angular/core");
 var sharedState_model_1 = require("./sharedState.model");
 var repository_model_1 = require("../model/repository.model");

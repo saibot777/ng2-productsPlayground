@@ -11,12 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-/**
- * Created by stefan.trajkovic on 23.2.2017..
- */
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/operator/map");
+require("rxjs/add/operator/catch");
+require("rxjs/add/observable/throw");
 exports.REST_URL = new core_1.OpaqueToken("rest_url");
 var RestDataSource = (function () {
     function RestDataSource(http, url) {
@@ -24,19 +24,28 @@ var RestDataSource = (function () {
         this.url = url;
     }
     RestDataSource.prototype.getData = function () {
-        return this.http.get(this.url).map(function (response) { return response.json(); });
+        return this.sendRequest(http_1.RequestMethod.Get, this.url);
     };
     RestDataSource.prototype.saveProduct = function (product) {
-        return this.http.post(this.url, product)
-            .map(function (response) { return response.json(); });
+        return this.sendRequest(http_1.RequestMethod.Post, this.url, product);
     };
     RestDataSource.prototype.updateProduct = function (product) {
-        return this.http.put(this.url + "/" + product.id, product)
-            .map(function (response) { return response.json(); });
+        return this.sendRequest(http_1.RequestMethod.Put, this.url + "/" + product.id, product);
     };
     RestDataSource.prototype.deleteProduct = function (id) {
-        return this.http.delete(this.url + "/" + id)
-            .map(function (response) { return response.json(); });
+        return this.sendRequest(http_1.RequestMethod.Delete, this.url + "/" + id);
+    };
+    RestDataSource.prototype.sendRequest = function (verb, url, body) {
+        var headers = new http_1.Headers();
+        headers.set("Access-Key", "<secret>");
+        headers.set("Application-Names", ["exampleApp", "proAngular"]);
+        return this.http.request(new http_1.Request({
+            method: verb,
+            url: url,
+            body: body,
+            headers: headers
+        })).map(function (response) { return response.json(); })
+            .catch(function (error) { return Observable_1.Observable.throw("Network Error: " + error.statusText + " (" + error.status + ")"); });
     };
     RestDataSource = __decorate([
         core_1.Injectable(),

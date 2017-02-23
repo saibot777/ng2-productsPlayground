@@ -8,22 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by stefan.trajkovic on 22.2.2017..
- */
 var core_1 = require("@angular/core");
 var message_service_1 = require("./message.service");
+var router_1 = require("@angular/router");
+require("rxjs/add/operator/filter");
 var MessageComponent = (function () {
-    function MessageComponent(messageService) {
+    function MessageComponent(messageService, router) {
         var _this = this;
         messageService.messages.subscribe(function (m) { return _this.lastMessage = m; });
+        router.events
+            .filter(function (e) { return e instanceof router_1.NavigationEnd || e instanceof router_1.NavigationCancel; })
+            .subscribe(function (e) { _this.lastMessage = null; });
     }
     MessageComponent = __decorate([
         core_1.Component({
             selector: "paMessages",
             moduleId: module.id,
-            templateUrl: "message.component.html", }), 
-        __metadata('design:paramtypes', [message_service_1.MessageService])
+            templateUrl: "message.component.html",
+        }), 
+        __metadata('design:paramtypes', [message_service_1.MessageService, router_1.Router])
     ], MessageComponent);
     return MessageComponent;
 }());

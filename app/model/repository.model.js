@@ -8,9 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by stefan.trajkovic on 22.2.2017..
- */
 var core_1 = require("@angular/core");
 var rest_datasource_1 = require("./rest.datasource");
 var Model = (function () {
@@ -19,8 +16,6 @@ var Model = (function () {
         this.dataSource = dataSource;
         this.products = new Array();
         this.locator = function (p, id) { return p.id == id; };
-        // this.products = new Array<Product>();
-        // this.dataSource.getData().forEach(p => this.products.push(p));
         this.dataSource.getData().subscribe(function (data) { return _this.products = data; });
     }
     Model.prototype.getProducts = function () {
@@ -52,13 +47,6 @@ var Model = (function () {
                 _this.products.splice(index, 1);
             }
         });
-    };
-    Model.prototype.generateID = function () {
-        var candidate = 100;
-        while (this.getProduct(candidate) != null) {
-            candidate++;
-        }
-        return candidate;
     };
     Model = __decorate([
         core_1.Injectable(), 

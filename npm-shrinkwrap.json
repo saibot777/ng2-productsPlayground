@@ -35,6 +35,11 @@
       "from": "@angular/platform-browser-dynamic@2.2.0",
       "resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.2.0.tgz"
     },
+    "@angular/router": {
+      "version": "3.2.0",
+      "from": "@angular/router@3.2.0",
+      "resolved": "https://registry.npmjs.org/@angular/router/-/router-3.2.0.tgz"
+    },
     "@angular/upgrade": {
       "version": "2.2.0",
       "from": "@angular/upgrade@2.2.0",
@@ -1452,6 +1457,11 @@
       "from": "hosted-git-info@>=2.1.4 <3.0.0",
       "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.1.5.tgz",
       "dev": true
+    },
+    "html5-history-api": {
+      "version": "4.2.7",
+      "from": "html5-history-api@4.2.7",
+      "resolved": "https://registry.npmjs.org/html5-history-api/-/html5-history-api-4.2.7.tgz"
     },
     "http-errors": {
       "version": "1.5.1",

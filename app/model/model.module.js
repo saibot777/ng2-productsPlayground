@@ -14,11 +14,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var static_datasource_1 = require("./static.datasource");
 var repository_model_1 = require("./repository.model");
+var http_1 = require("@angular/http");
 var ModelModule = (function () {
     function ModelModule() {
     }
     ModelModule = __decorate([
         core_1.NgModule({
+            imports: [http_1.HttpModule],
             providers: [repository_model_1.Model, static_datasource_1.StaticDataSource]
         }), 
         __metadata('design:paramtypes', [])

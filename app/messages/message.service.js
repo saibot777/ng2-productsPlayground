@@ -12,17 +12,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by stefan.trajkovic on 22.2.2017..
  */
 var core_1 = require("@angular/core");
+var Subject_1 = require("rxjs/Subject");
 var MessageService = (function () {
     function MessageService() {
+        this.subject = new Subject_1.Subject();
     }
     MessageService.prototype.reportMessage = function (msg) {
-        if (this.handler != null) {
-            this.handler(msg);
-        }
+        this.subject.next(msg);
     };
-    MessageService.prototype.registerMessageHandler = function (handler) {
-        this.handler = handler;
-    };
+    Object.defineProperty(MessageService.prototype, "messages", {
+        get: function () {
+            return this.subject;
+        },
+        enumerable: true,
+        configurable: true
+    });
     MessageService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

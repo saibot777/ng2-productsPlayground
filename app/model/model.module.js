@@ -12,16 +12,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by stefan.trajkovic on 22.2.2017..
  */
 var core_1 = require("@angular/core");
-var static_datasource_1 = require("./static.datasource");
+// import { StaticDataSource } from "./static.datasource";
 var repository_model_1 = require("./repository.model");
 var http_1 = require("@angular/http");
+var rest_datasource_1 = require("./rest.datasource");
 var ModelModule = (function () {
     function ModelModule() {
     }
     ModelModule = __decorate([
         core_1.NgModule({
             imports: [http_1.HttpModule],
-            providers: [repository_model_1.Model, static_datasource_1.StaticDataSource]
+            providers: [repository_model_1.Model, rest_datasource_1.RestDataSource,
+                { provide: rest_datasource_1.REST_URL, useValue: "http://" + location.hostname + ":3500/products" }]
         }), 
         __metadata('design:paramtypes', [])
     ], ModelModule);

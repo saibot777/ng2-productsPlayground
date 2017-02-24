@@ -3,12 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="7e2eb55b-fed1-41d5-9309-3173d1687dac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/core.module.js" afterPath="$PROJECT_DIR$/app/core/core.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.routing.js" afterPath="$PROJECT_DIR$/app/app.routing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.routing.ts" afterPath="$PROJECT_DIR$/app/app.routing.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/categoryCount.component.ts" afterPath="$PROJECT_DIR$/app/core/categoryCount.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/core.module.ts" afterPath="$PROJECT_DIR$/app/core/core.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/form.component.html" afterPath="$PROJECT_DIR$/app/core/form.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/form.component.js" afterPath="$PROJECT_DIR$/app/core/form.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/form.component.ts" afterPath="$PROJECT_DIR$/app/core/form.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/notFound.component.ts" afterPath="$PROJECT_DIR$/app/core/notFound.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/productCount.component.ts" afterPath="$PROJECT_DIR$/app/core/productCount.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/table.component.html" afterPath="$PROJECT_DIR$/app/core/table.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/repository.model.js" afterPath="$PROJECT_DIR$/app/model/repository.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/table.component.js" afterPath="$PROJECT_DIR$/app/core/table.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/table.component.ts" afterPath="$PROJECT_DIR$/app/core/table.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/repository.model.ts" afterPath="$PROJECT_DIR$/app/model/repository.model.ts" />
     </list>
     <ignored path="data-binding.iws" />
@@ -30,33 +36,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="repository.model.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/repository.model.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="form.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/form.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+            <state relative-caret-position="391">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
+                <marker date="1486569321400" expanded="true" signature="983:985" ph="//..." />
+                <marker date="1486569321400" expanded="true" signature="983:1039" ph="{...}" />
+                <marker date="1486569321400" expanded="true" signature="983:1045" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -65,21 +54,66 @@
       <file leaf-file-name="table.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/table.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="85">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding>
+                <marker date="1486569321447" expanded="true" signature="1388:1661" ph="..." />
+                <marker date="1486569321447" expanded="true" signature="1421:1474" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.routing.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.routing.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="table.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/core/table.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="table.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/core/table.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productCount.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="form.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/core/form.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-15">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productCount.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/productCount.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-              <folding>
-                <element signature="e#54#152#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="629">
+              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,11 +121,9 @@
       <file leaf-file-name="categoryCount.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/categoryCount.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-              <folding>
-                <element signature="e#54#159#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,8 +131,8 @@
       <file leaf-file-name="notFound.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/notFound.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,26 +141,10 @@
       <file leaf-file-name="core.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/core/core.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+            <state relative-caret-position="357">
+              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#369#408#0" expanded="true" />
-                <element signature="e#724#771#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/core/core.module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1487931694738" expanded="true" signature="2161:2171" ph="{...}" />
-                <marker date="1487931694738" expanded="true" signature="2161:2224" ph="[...]" />
-                <marker date="1487931694738" expanded="true" signature="2161:2263" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -163,7 +179,6 @@
         <option value="$PROJECT_DIR$/app/main.ts" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/core/sharedState.model.ts" />
-        <option value="$PROJECT_DIR$/app/core/table.component.ts" />
         <option value="$PROJECT_DIR$/app/core/state.pipe.ts" />
         <option value="$PROJECT_DIR$/app/messages/message.service.ts" />
         <option value="$PROJECT_DIR$/app/messages/message.component.ts" />
@@ -172,15 +187,16 @@
         <option value="$PROJECT_DIR$/app/model/rest.datasource.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/systemjs.config.js" />
-        <option value="$PROJECT_DIR$/app/core/form.component.html" />
-        <option value="$PROJECT_DIR$/app/app.routing.ts" />
         <option value="$PROJECT_DIR$/app/model/repository.model.ts" />
-        <option value="$PROJECT_DIR$/app/core/form.component.ts" />
-        <option value="$PROJECT_DIR$/app/core/table.component.html" />
         <option value="$PROJECT_DIR$/app/core/categoryCount.component.ts" />
         <option value="$PROJECT_DIR$/app/core/notFound.component.ts" />
         <option value="$PROJECT_DIR$/app/core/core.module.ts" />
         <option value="$PROJECT_DIR$/app/core/productCount.component.ts" />
+        <option value="$PROJECT_DIR$/app/core/form.component.ts" />
+        <option value="$PROJECT_DIR$/app/app.routing.ts" />
+        <option value="$PROJECT_DIR$/app/core/table.component.ts" />
+        <option value="$PROJECT_DIR$/app/core/table.component.html" />
+        <option value="$PROJECT_DIR$/app/core/form.component.html" />
       </list>
     </option>
   </component>
@@ -378,15 +394,15 @@
       <workItem from="1487855977108" duration="24000" />
       <workItem from="1487863468005" duration="1122000" />
       <workItem from="1487864627374" duration="250000" />
-      <workItem from="1487928423639" duration="3418000" />
+      <workItem from="1487928423639" duration="5840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38846000" />
+    <option name="totallyTimeSpent" value="41268000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19765739" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -424,7 +440,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/repository.model.ts" />
     <entry file="file://$PROJECT_DIR$/app/datasource.model.ts" />
     <entry file="file://$PROJECT_DIR$/app/product.model.js" />
     <entry file="file://$PROJECT_DIR$/app/repository.model.ts" />
@@ -607,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/form.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/static.datasource.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -649,27 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/table.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/messages/errorHandler.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.routing.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,73 +680,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/table.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/core/core.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1487931694738" expanded="true" signature="2161:2171" ph="{...}" />
-            <marker date="1487931694738" expanded="true" signature="2161:2224" ph="[...]" />
-            <marker date="1487931694738" expanded="true" signature="2161:2263" ph="{...}" />
+            <marker date="1487934152706" expanded="true" signature="2161:2171" ph="{...}" />
+            <marker date="1487934152706" expanded="true" signature="2161:2224" ph="[...]" />
+            <marker date="1487934152706" expanded="true" signature="2161:2263" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/core/notFound.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/core/core.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        <state relative-caret-position="357">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#369#408#0" expanded="true" />
-            <element signature="e#724#771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/core/categoryCount.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-          <folding>
-            <element signature="e#54#159#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/core/productCount.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="629">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
           <folding>
-            <element signature="e#54#152#0" expanded="true" />
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/table.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/table.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding>
+            <marker date="1486569321447" expanded="true" signature="1388:1661" ph="..." />
+            <marker date="1486569321447" expanded="true" signature="1421:1474" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/table.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <marker date="1486569321400" expanded="true" signature="983:985" ph="//..." />
+            <marker date="1486569321400" expanded="true" signature="983:1039" ph="{...}" />
+            <marker date="1486569321400" expanded="true" signature="983:1045" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

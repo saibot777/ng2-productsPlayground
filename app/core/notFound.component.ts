@@ -1,10 +1,8 @@
-/**
- * Created by stefan.trajkovic on 24.2.2017..
- */
-import { Component } from "@angular/core";
+﻿import { Component } from "@angular/core";
+
 @Component({
     selector: "paNotFound",
-    template: `<h3 class="bg-danger p-a-1">Sorry, something went wrong</h3>               
+    template: `<h3 class="bg-danger p-a-1">Sorry, something went wrong</h3>
                <button class="btn btn-primary" routerLink="/">Start Over</button>`
 })
-export class NotFoundComponent {}
+export class NotFoundComponent { }

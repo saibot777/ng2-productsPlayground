@@ -22,19 +22,19 @@ export class Model {
 
     getNextProductId(id: number): number {
         let index = this.products.findIndex(p => this.locator(p, id));
-        if(index > -1) {
+        if (index > -1) {
             return this.products[this.products.length > index + 2
-                    ? index + 1 : 0].id;
+                ? index + 1 : 0].id;
         } else {
             return id || 0;
         }
     }
 
-    getPreviousProductId(id: number): number {
+    getPreviousProductid(id: number): number {
         let index = this.products.findIndex(p => this.locator(p, id));
         if (index > -1) {
             return this.products[index > 0
-                ? index -1 : this.products.length -1].id;
+                ? index - 1 : this.products.length - 1].id;
         } else {
             return id || 0;
         }

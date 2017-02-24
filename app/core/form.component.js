@@ -14,15 +14,18 @@ var repository_model_1 = require("../model/repository.model");
 var router_1 = require("@angular/router");
 var FormComponent = (function () {
     function FormComponent(model, activeRoute, router) {
+        var _this = this;
         this.model = model;
         this.router = router;
         this.product = new product_model_1.Product();
         this.editing = false;
-        this.editing = activeRoute.snapshot.params["mode"] == "edit";
-        var id = activeRoute.snapshot.params["id"];
-        if (id != null) {
-            Object.assign(this.product, model.getProduct(id) || new product_model_1.Product());
-        }
+        activeRoute.params.subscribe(function (params) {
+            _this.editing = params["mode"] == "edit";
+            var id = params["id"];
+            if (id != null) {
+                Object.assign(_this.product, model.getProduct(id) || new product_model_1.Product());
+            }
+        });
     }
     FormComponent.prototype.submitForm = function (form) {
         if (form.valid) {

@@ -1,22 +1,20 @@
-/**
- * Created by stefan.trajkovic on 24.2.2017..
- */
-import { Component, KeyValueDiffer, OnInit
-    KeyValueDiffers, ChangeDetectorRef } from "@angular/core";
+﻿import {
+    Component, KeyValueDiffer,
+    KeyValueDiffers, ChangeDetectorRef
+} from "@angular/core";
 import { Model } from "../model/repository.model";
 
 @Component({
     selector: "paCategoryCount",
     template: `<div class="bg-primary p-a-1">There are {{count}} categories</div>`
 })
-export class CategoryCountComponent implements OnInit {
-    private differ:KeyValueDiffer;
-    count:number = 0;
+export class CategoryCountComponent {
+    private differ: KeyValueDiffer;
+    count: number = 0;
 
-    constructor(private model:Model,
-                private keyValueDiffers:KeyValueDiffers,
-                private changeDetector:ChangeDetectorRef) {
-    }
+    constructor(private model: Model,
+        private keyValueDiffers: KeyValueDiffers,
+        private changeDetector: ChangeDetectorRef) { }
 
     ngOnInit() {
         this.differ = this.keyValueDiffers
@@ -31,6 +29,5 @@ export class CategoryCountComponent implements OnInit {
                 .filter((category, index, array) => array.indexOf(category) == index)
                 .length;
         }
-
     }
 }

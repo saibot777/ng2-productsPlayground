@@ -21,18 +21,7 @@ var FormComponent = (function () {
         this.editing = activeRoute.snapshot.params["mode"] == "edit";
         var id = activeRoute.snapshot.params["id"];
         if (id != null) {
-            var name_1 = activeRoute.snapshot.params["name"];
-            var category = activeRoute.snapshot.params["category"];
-            var price = activeRoute.snapshot.params["price"];
-            if (name_1 != null && category != null && price != null) {
-                this.product.id = id;
-                this.product.name = name_1;
-                this.product.category = category;
-                this.product.price = Number.parseFloat(price);
-            }
-            else {
-                Object.assign(this.product, model.getProduct(id) || new product_model_1.Product());
-            }
+            Object.assign(this.product, model.getProduct(id) || new product_model_1.Product());
         }
     }
     FormComponent.prototype.submitForm = function (form) {

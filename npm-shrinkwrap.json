@@ -3421,6 +3421,11 @@
       "resolved": "https://registry.npmjs.org/wcwidth/-/wcwidth-1.0.1.tgz",
       "dev": true
     },
+    "web-animations-js": {
+      "version": "2.2.2",
+      "from": "web-animations-js@2.2.2",
+      "resolved": "https://registry.npmjs.org/web-animations-js/-/web-animations-js-2.2.2.tgz"
+    },
     "weinre": {
       "version": "2.0.0-pre-I0Z7U9OV",
       "from": "weinre@>=2.0.0-pre-I0Z7U9OV <3.0.0",

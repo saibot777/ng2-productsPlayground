@@ -11,11 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var repository_model_1 = require("../model/repository.model");
 var router_1 = require("@angular/router");
+var table_animations_1 = require("./table.animations");
 var TableComponent = (function () {
     function TableComponent(model, activeRoute) {
         var _this = this;
         this.model = model;
         this.category = null;
+        this.highlightCategory = "";
         activeRoute.params.subscribe(function (params) {
             _this.category = params["category"] || null;
         });
@@ -40,11 +42,21 @@ var TableComponent = (function () {
     TableComponent.prototype.deleteProduct = function (key) {
         this.model.deleteProduct(key);
     };
+    TableComponent.prototype.getRowState = function (category) {
+        return this.highlightCategory == "" ? "" :
+            this.highlightCategory == category ? "selected" : "notselected";
+    };
+    TableComponent.prototype.writeAnimationEvent = function (event, name, start) {
+        console.log("Animation " + name + " " + (start ? 'Start' : 'Done')
+            + " from: " + event.fromState + " to: " + event.toState + " time: "
+            + event.totalTime);
+    };
     TableComponent = __decorate([
         core_1.Component({
             selector: "paTable",
             moduleId: module.id,
-            templateUrl: "table.component.html"
+            templateUrl: "table.component.html",
+            animations: [table_animations_1.HighlightTrigger]
         }), 
         __metadata('design:paramtypes', [repository_model_1.Model, router_1.ActivatedRoute])
     ], TableComponent);

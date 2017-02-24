@@ -8,17 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by stefan.trajkovic on 24.2.2017..
- */
 var core_1 = require("@angular/core");
 var repository_model_1 = require("../model/repository.model");
+var router_1 = require("@angular/router");
 var ProductCountComponent = (function () {
-    function ProductCountComponent(model, keyValueDiffers, changeDetector) {
+    function ProductCountComponent(model, keyValueDiffers, changeDetector, activeRoute) {
+        var _this = this;
         this.model = model;
         this.keyValueDiffers = keyValueDiffers;
         this.changeDetector = changeDetector;
         this.count = 0;
+        activeRoute.pathFromRoot.forEach(function (route) { return route.params.subscribe(function (params) {
+            if (params["category"] != null) {
+                _this.category = params["category"];
+                _this.updateCount();
+            }
+        }); });
     }
     ProductCountComponent.prototype.ngOnInit = function () {
         this.differ = this.keyValueDiffers
@@ -31,14 +36,17 @@ var ProductCountComponent = (function () {
         }
     };
     ProductCountComponent.prototype.updateCount = function () {
-        this.count = this.model.getProducts().length;
+        var _this = this;
+        this.count = this.model.getProducts()
+            .filter(function (p) { return _this.category == null || p.category == _this.category; })
+            .length;
     };
     ProductCountComponent = __decorate([
         core_1.Component({
             selector: "paProductCount",
             template: "<div class=\"bg-info p-a-1\">There are {{count}} products</div>"
         }), 
-        __metadata('design:paramtypes', [repository_model_1.Model, core_1.KeyValueDiffers, core_1.ChangeDetectorRef])
+        __metadata('design:paramtypes', [repository_model_1.Model, core_1.KeyValueDiffers, core_1.ChangeDetectorRef, router_1.ActivatedRoute])
     ], ProductCountComponent);
     return ProductCountComponent;
 }());

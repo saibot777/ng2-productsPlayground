@@ -36,7 +36,7 @@ var Model = (function () {
             return id || 0;
         }
     };
-    Model.prototype.getPreviousProductId = function (id) {
+    Model.prototype.getPreviousProductid = function (id) {
         var _this = this;
         var index = this.products.findIndex(function (p) { return _this.locator(p, id); });
         if (index > -1) {

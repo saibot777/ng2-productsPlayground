@@ -8,9 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by stefan.trajkovic on 24.2.2017..
- */
 var core_1 = require("@angular/core");
 var NotFoundComponent = (function () {
     function NotFoundComponent() {
@@ -18,7 +15,7 @@ var NotFoundComponent = (function () {
     NotFoundComponent = __decorate([
         core_1.Component({
             selector: "paNotFound",
-            template: "<h3 class=\"bg-danger p-a-1\">Sorry, something went wrong</h3>               \n               <button class=\"btn btn-primary\" routerLink=\"/\">Start Over</button>"
+            template: "<h3 class=\"bg-danger p-a-1\">Sorry, something went wrong</h3>\n               <button class=\"btn btn-primary\" routerLink=\"/\">Start Over</button>"
         }), 
         __metadata('design:paramtypes', [])
     ], NotFoundComponent);

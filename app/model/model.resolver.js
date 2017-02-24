@@ -9,21 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
 var repository_model_1 = require("./repository.model");
 var rest_datasource_1 = require("./rest.datasource");
-var model_resolver_1 = require("./model.resolver");
-var ModelModule = (function () {
-    function ModelModule() {
+var message_service_1 = require("../messages/message.service");
+var message_model_1 = require("../messages/message.model");
+var ModelResolver = (function () {
+    function ModelResolver(model, dataSource, messages) {
+        this.model = model;
+        this.dataSource = dataSource;
+        this.messages = messages;
     }
-    ModelModule = __decorate([
-        core_1.NgModule({
-            imports: [http_1.HttpModule, http_1.JsonpModule],
-            providers: [repository_model_1.Model, rest_datasource_1.RestDataSource, model_resolver_1.ModelResolver,
-                { provide: rest_datasource_1.REST_URL, useValue: "http://localhost:3500/products" }]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ModelModule);
-    return ModelModule;
+    ModelResolver.prototype.resolve = function (route, state) {
+        if (this.model.getProducts().length == 0) {
+            this.messages.reportMessage(new message_model_1.Message("Loading data..."));
+            return this.dataSource.getData();
+        }
+    };
+    ModelResolver = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [repository_model_1.Model, rest_datasource_1.RestDataSource, message_service_1.MessageService])
+    ], ModelResolver);
+    return ModelResolver;
 }());
-exports.ModelModule = ModelModule;
+exports.ModelResolver = ModelResolver;
